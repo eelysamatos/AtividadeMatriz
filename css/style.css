@@ -1,0 +1,31 @@
+.fundo{
+  background-size: 100%;
+  margin-left: 40px;
+  background-image: url(../img/caca-palavras.jpg);
+  background-repeat: no-repeat;
+  position:absolute;
+}
+
+table{
+  margin-top:100x;  
+  margin-left: 580px; 
+  position: center;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+}
+.text{
+  text-align:center;
+  font-size: 40px;
+  top:10%;
+  color:#facadc;
+  position:relative;
+}
+
+.text2{
+  text-align:center;
+  font-size: 40px;
+  top:10%;
+  left: 550px;
+  color:#ffffff;
+  position:relative;
+}

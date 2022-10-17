@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="fundo">
+    <div>
+      <h1 class="text"> Mundo da Programação</h1>
+      <h2 class="text2"> Caça Palavras</h1>
+        <script>
+            matriz= new Array;
+            matriz_espelho= new Array;
+
+            matriz =[
+                    ["J","O","S","Q","L","A","L","C","D","T","D","W","Q","A","B","J","Q","E","F","G"], 
+                    ["A","G","I","T","Q","I","B","C","E","Y","A","H","T","S","Q","S","H","M","T","I"], 
+                    ["V","B","k","C","T","R","D","A","S","k","F","A","F","W","C","A","B","C","D","T"],
+                    ["A","G","E","P","Q","l","D","E","E","i","E","R","E","Y","P","K","S","F","L","H"], 
+                    ["S","B","C","H","T","L","O","G","N","N","H","D","P","Z","F","C","D","H","Q","U"],
+                    ["C","H","M","T","R","O","B","C","V","T","A","W","U","I","O","L","G","A","J","B"],
+                    ["R","T","Z","M","I","P","A","B","O","D","A","A","O","J","L","L","G","M","J","O"],
+                    ["I","M","E","L","O","Z","B","C","L","T","X","Ç","F","M","H","L","G","Y","J","A"],
+                    ["P","L","R","K","I","P","A","B","V","D","H","E","A","X","U","B","C","S","H","V"], 
+                    ["T","G","A","O","H","A","B","C","I","T","L","G","A","O","L","N","C","Q","H","A"],
+                    ["S","G","W","O","H","A","B","C","M","T","L","G","N","O","L","O","C","L","H","J"],
+                    ["S","X","T","L","H","A","B","C","E","T","C","S","H","I","L","H","A","D","k","O"],
+                    ["S","G","F","O","H","A","B","C","N","T","L","G","A","T","L","T","A","D","k","E"],
+                    ["S","C","O","D","I","G","O","C","T","T","L","G","Y","O","L","Y","A","D","k","D"],
+                    ["S","G","S","B","A","B","O","O","O","S","T","R","A","P","L","P","A","D","k","I"]];
+
+            matriz_espelho =[
+                [1,0,1,1,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1], 
+                [1,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1], 
+                [1,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1],
+                [1,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1], 
+                [1,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1],
+                [1,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,1],
+                [1,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0],
+                [1,0,1,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,1],
+                [1,0,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,1],
+                [1,0,1,0,0,0,0,0,1,0,0,0,0,1,0,1,0,0,0,1],
+                [0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1],
+                [0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0],
+                [0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1],
+                [0,0,1,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,1],
+                [0,0,1,0,0,1,1,1,1,1,1,1,1,1,0,1,0,0,0,1]]; 
+
+                            
+                document.write("<div>"); 
+                    document.write("<table border='5' >");
+                    for(linha=0; linha<15; linha++){
+                        document.write("<tr>");
+                            for(coluna=0; coluna<20; coluna++){
+                                document.write("<td id='"+ linha.toString()+'-'+coluna.toString()+"'>"+matriz[linha][coluna]+"</td>");
+                                if(matriz_espelho[linha][coluna] == 1){
+                                document.getElementById(linha.toString()+'-'+coluna.toString()).style.background='	#ADD8E6';
+                                }            
+                            }
+                            document.write("</tr>");
+                        }
+                    document.write("</table>");
+                document.write("</div>");      
+        </script>     
+    </div>
+</body>
+</html>
